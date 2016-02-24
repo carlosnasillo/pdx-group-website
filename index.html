@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Edit title tag</title>
+        <title>PDX Technology</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/et-line-icons.css" rel="stylesheet" type="text/css" media="all">
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
@@ -19,10 +19,6 @@
     <body>
 				
 		<div class="nav-container">
-		    
-		    
-		
-		    
 		
 		</div>
 		
@@ -37,18 +33,18 @@
 		        <div class="container v-align-transform">
 		            <div class="row">
 		                <div class="col-sm-12">
-		                    <h1 class="thin mb0"><b>PDX Technology Group</b><br>Enhancing the P2P Lending asset class&nbsp;</h1>
+		                    <h1 class="thin mb0"><b>PDX Technology</b><br>Enhancing the P2P Lending asset class&nbsp;</h1>
 		                </div>
 		            </div>
 		            
 		        </div>
 		        
 		        <div class="align-bottom text-center">
-		            <a class="btn btn-white mb32" href="#">LEARN MORE<br></a>
+		            <a class="btn btn-white mb32" href="#pdx-family">LEARN MORE<br></a>
 		            <ul class="list-inline social-list mb24">
 		                
 		                <li>
-		                    <a href="#">
+		                    <a href="#pdx-family">
 		                        <i class="ti ti-angle-double-down"></i>
 		                    </a>
 		                </li>
@@ -56,7 +52,7 @@
 		                
 		            </ul>
 		        </div>
-		    </section><section class="bg-secondary">
+		    </section><section id="pdx-family" class="bg-secondary">
 		        <div class="container">
 		            <div class="row mb64 mb-xs-24">
 		                <div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
@@ -68,22 +64,21 @@
 		                <div class="col-sm-6 text-center">
 		                    <div class="feature">
 		                        <div class="text-center">
-		                            <i class="mb40 mb-xs-24 inline-block color-primary et-line-genius icon-lg"></i>
-		                            <h5 class="uppercase">PDX.ROBO-ADVISOR</h5>
-		                        </div>
-		                        <p>Institutional grade investment tools for retail investors <br>fully integrated with leading marketplace lending platforms.<br><br></p>
-		                        <a class="btn mb32" href="#">VISIT WEBSITE<br></a>
-		                    </div>
-		                    
-		                </div>
-		                <div class="col-sm-6 text-center">
-		                    <div class="feature">
-		                        <div class="text-center">
 		                            <i class="mb40 mb-xs-24 inline-block color-primary et-line-lock icon-lg"></i>
 		                            <h5 class="uppercase">PDX.INSURANCE</h5>
 		                        </div>
 		                        <p>An easy pay-as-you-go way to protect your P2P portfolios of investments<br>against default and other adverse credit events.<br><br></p>
 		                        <a class="btn mb32" href="#">VISIT WEBSITE<br></a>
+		                    </div>
+						</div>
+						<div class="col-sm-6 text-center">
+		                    <div class="feature">
+		                        <div class="text-center">
+		                            <i class="mb40 mb-xs-24 inline-block color-primary et-line-layers icon-lg"></i>
+		                            <h5 class="uppercase">PDX.STEALTH</h5>
+		                        </div>
+		                        <p>All we can say is that Institutional Investors will love it.<br><br><br></p>
+		                        <a class="btn mb32" href="#">COMING SOON<br></a>
 		                    </div>
 		                    
 		                </div>
@@ -146,6 +141,25 @@
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/scripts.js"></script>
+
+		<!-- AutoScroll -->
+        <script type="text/javascript">
+        	$(function() {
+			  $('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html, body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+        </script>
+
     </body>
 </html>
 				
