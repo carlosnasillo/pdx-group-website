@@ -19,6 +19,7 @@
         event.preventDefault(); // prevent default submit behaviour
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
+          console.log(xmlhttp.status);
           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             // Success message
             $('#success').html("<div class='alert alert-success'>");
@@ -28,7 +29,7 @@
             //clear all fields
             $('#contactForm').trigger("reset");
           }
-          else {
+          else if (xmlhttp.status != 200 && xmlhttp.status != 0) {
             // Fail message
             $('#success').html("<div class='alert alert-danger'>");
             $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
