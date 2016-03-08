@@ -15,8 +15,9 @@
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
 
-      if (email.length > 0) {
-        event.preventDefault(); // prevent default submit behaviour
+      event.preventDefault();
+      if (email.length > 0 && name.length > 0 && message.length > 0) {
+         // prevent default submit behaviour
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
           console.log(xmlhttp.status);
@@ -40,6 +41,12 @@
         var parameters = "email=" +(email)+ "&name=" +encodeURIComponent(name)+ "&message=" +encodeURIComponent(message);
         xmlhttp.open("GET", "api/contact_us.php?" + parameters, true);
         xmlhttp.send();
+      }
+      else {
+        $('#success').html("<div class='alert alert-danger'>");
+        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+        $('#success > .alert-danger').append("<strong>Please fill all the fields to send the message.");
+        $('#success > .alert-danger').append('</div>');
       }
     },
     filter: function() {
