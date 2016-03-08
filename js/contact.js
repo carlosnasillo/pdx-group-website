@@ -1,4 +1,4 @@
-function() {
+(function() {
   $(".form-email input, .form-email textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
@@ -45,4 +45,4 @@ function() {
       return $(this).is(":visible");
     },
   });
-}();
+})();
